@@ -278,7 +278,7 @@
     /* HERO */
     .hero {
       min-height: 92vh;
-      background: linear-gradient(135deg, rgba(10, 79, 150, .92) 0%, rgba(15, 108, 189, .8) 55%, rgba(46, 204, 113, .52) 100%), url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1600&q=80') center/cover no-repeat;
+      background: linear-gradient(135deg, rgba(10, 79, 150, .92) 0%, rgba(15, 108, 189, .8) 55%, rgba(46, 204, 113, .52) 100%), url('https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?w=1600&q=80') center/cover no-repeat;
       display: flex;
       align-items: center;
       position: relative;
@@ -769,31 +769,11 @@
       border-color: var(--primary);
     }
 
-    .doc-av {
-      height: 185px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 65px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .doc-av::after {
-      content: '';
-      position: absolute;
-      bottom: -24px;
-      left: -24px;
-      right: -24px;
-      height: 56px;
-      background: rgba(255, 255, 255, .07);
-      border-radius: 50%;
-    }
-
-    .doc-av i {
-      position: relative;
-      z-index: 1;
-      color: rgba(255, 255, 255, .45);
+    .doc-img {
+      height: 240px;
+      width: 100%;
+      object-fit: cover;
+      object-position: top;
     }
 
     .doc-body {
@@ -1479,47 +1459,38 @@
     }
 
     /* FLOATING BUTTONS */
-    .fab {
+    .fab-ext {
       position: fixed;
-      width: 54px;
-      height: 54px;
-      border-radius: 50%;
+      border-radius: 50px;
       display: flex;
       align-items: center;
-      justify-content: center;
-      font-size: 22px;
-      color: #fff;
+      gap: 10px;
+      padding: 12px 24px;
+      font-size: 15px;
+      font-weight: 700;
+      color: #fff !important;
       text-decoration: none;
       z-index: 8000;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, .22);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, .3);
       transition: transform .2s;
-      border: none;
-      cursor: pointer;
+      font-family: 'Poppins', sans-serif;
     }
 
-    .fab:hover {
-      transform: scale(1.12);
-      color: #fff;
+    .fab-ext:hover {
+      transform: scale(1.05);
     }
 
     .fab-wa {
       right: 26px;
-      bottom: 162px;
+      bottom: 26px;
       background: #25d366;
-      animation: fb 2.5s ease infinite;
     }
 
     .fab-call {
-      right: 26px;
-      bottom: 94px;
-      background: linear-gradient(135deg, var(--accent), #c0392b);
-      animation: fb 2.5s ease .8s infinite;
-    }
-
-    .fab-appt {
-      right: 26px;
+      left: 26px;
       bottom: 26px;
-      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      background: linear-gradient(135deg, var(--accent), #c0392b);
+      animation: fb 2.5s ease 1s infinite;
     }
 
     @keyframes fb {
@@ -1536,8 +1507,8 @@
 
     .scroll-top {
       position: fixed;
-      bottom: 26px;
-      left: 26px;
+      bottom: 90px;
+      right: 26px;
       width: 44px;
       height: 44px;
       background: var(--primary-dark);
@@ -1706,59 +1677,51 @@
       <div class="hfc">
         <div class="hfc-ico" style="background:#e8f3fb;color:var(--primary);"><i class="bi bi-hospital fs-5"></i></div>
         <div>
-          <div class="hfc-num">99+</div>
-          <div class="hfc-lbl">Hospital Beds</div>
+          <div class="hfc-num" style="font-size:15px;">Serving thousands</div>
+          <div class="hfc-lbl">of patients every year</div>
         </div>
       </div>
       <div class="hfc">
         <div class="hfc-ico" style="background:#e8faf1;color:var(--secondary-dark);"><i
-            class="bi bi-emoji-smile fs-5"></i></div>
+            class="bi bi-shield-check fs-5"></i></div>
         <div>
-          <div class="hfc-num">46K+</div>
-          <div class="hfc-lbl">Happy Patients</div>
-        </div>
-      </div>
-      <div class="hfc">
-        <div class="hfc-ico" style="background:#fde8e8;color:var(--accent);"><i class="bi bi-award-fill fs-5"></i></div>
-        <div>
-          <div class="hfc-num">4.8 ⭐</div>
-          <div class="hfc-lbl">Patient Rating</div>
+          <div class="hfc-num" style="font-size:15px;">Trusted by families</div>
+          <div class="hfc-lbl">across Bengaluru</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- STATS STRIP -->
+  <!-- WHY CHOOSE US -->
   <div class="stats-strip">
     <div class="container">
-      <div class="row g-0 text-center">
-        <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="80">
-          <div class="stat-item">
-            <div style="font-size:22px;margin-bottom:5px;">🏥</div>
-            <div class="stat-num"><span class="counter" data-target="99">0</span><sup>+</sup></div>
-            <div class="stat-lbl">Hospital Beds</div>
+      <div class="text-center mb-4">
+        <h3 style="font-family:'Poppins';font-weight:700;color:var(--text);margin-bottom:30px;">Why Choose The Pulse
+          Hospital</h3>
+      </div>
+      <div class="row g-4 text-center justify-content-center">
+        <div class="col-6 col-md-2" data-aos="fade-up" data-aos-delay="50">
+          <div style="font-size:28px;color:var(--primary);margin-bottom:8px;"><i class="bi bi-clock-fill"></i></div>
+          <div style="font-family:'Poppins';font-weight:700;font-size:13px;line-height:1.4;">24/7 emergency support
           </div>
         </div>
-        <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="150">
-          <div class="stat-item">
-            <div style="font-size:22px;margin-bottom:5px;">👨‍⚕️</div>
-            <div class="stat-num"><span class="counter" data-target="18">0</span><sup>+</sup></div>
-            <div class="stat-lbl">Specialist Doctors</div>
+        <div class="col-6 col-md-2" data-aos="fade-up" data-aos-delay="100">
+          <div style="font-size:28px;color:var(--secondary);margin-bottom:8px;"><i class="bi bi-person-badge-fill"></i>
           </div>
+          <div style="font-family:'Poppins';font-weight:700;font-size:13px;line-height:1.4;">Expert specialists</div>
         </div>
-        <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="220">
-          <div class="stat-item">
-            <div style="font-size:22px;margin-bottom:5px;">😊</div>
-            <div class="stat-num"><span class="counter" data-target="46">0</span>K<sup>+</sup></div>
-            <div class="stat-lbl">Happy Patients</div>
-          </div>
+        <div class="col-6 col-md-2" data-aos="fade-up" data-aos-delay="150">
+          <div style="font-size:28px;color:#e74c3c;margin-bottom:8px;"><i class="bi bi-heart-pulse-fill"></i></div>
+          <div style="font-family:'Poppins';font-weight:700;font-size:13px;line-height:1.4;">Modern equipment</div>
         </div>
-        <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="290">
-          <div class="stat-item">
-            <div style="font-size:22px;margin-bottom:5px;">🚑</div>
-            <div class="stat-num">24<sup>/7</sup></div>
-            <div class="stat-lbl">Emergency Care</div>
-          </div>
+        <div class="col-6 col-md-2" data-aos="fade-up" data-aos-delay="200">
+          <div style="font-size:28px;color:#f39c12;margin-bottom:8px;"><i class="bi bi-geo-alt-fill"></i></div>
+          <div style="font-family:'Poppins';font-weight:700;font-size:13px;line-height:1.4;">Convenient Girinagar
+            location</div>
+        </div>
+        <div class="col-6 col-md-2" data-aos="fade-up" data-aos-delay="250">
+          <div style="font-size:28px;color:#8e44ad;margin-bottom:8px;"><i class="bi bi-shield-fill-check"></i></div>
+          <div style="font-family:'Poppins';font-weight:700;font-size:13px;line-height:1.4;">Trusted patient care</div>
         </div>
       </div>
     </div>
@@ -1770,7 +1733,7 @@
       <div class="row align-items-center g-5">
         <div class="col-lg-5" data-aos="fade-right">
           <div style="position:relative;">
-            <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=700&q=80" alt="The Pulse Hospital"
+            <img src="https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=700&q=80" alt="The Pulse Hospital"
               class="about-img" />
             <div class="about-float">
               <div class="big">30<span style="font-size:.5em;opacity:.7">+</span></div>
@@ -1933,7 +1896,7 @@
           <div class="sec-line"></div>
           <p style="color:var(--muted);font-size:14.5px;line-height:1.8;margin-bottom:24px;">State-of-the-art technology
             and infrastructure delivering the highest standard of diagnosis and treatment at every step.</p>
-          <img src="https://images.unsplash.com/photo-1504439468489-c8920d796a29?w=500&q=80" alt="Hospital Facilities"
+          <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=500&q=80" alt="Hospital Facilities"
             style="width:100%;border-radius:var(--radius);box-shadow:var(--shadow);" />
         </div>
         <div class="col-lg-7" data-aos="fade-left" data-aos-delay="120">
@@ -1997,102 +1960,51 @@
         <p style="color:var(--muted);max-width:500px;margin:0 auto;font-size:14.5px;">Experienced, compassionate
           specialists committed to your wellbeing.</p>
       </div>
-      <div class="row g-4">
+      <div class="row g-4 justify-content-center">
         <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="80">
           <div class="doc-card">
-            <div class="doc-av" style="background:linear-gradient(135deg,#0F6CBD,#0a4f96);"><i
-                class="bi bi-person-badge fs-1"></i></div>
+            <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=300&q=80" class="doc-img"
+              alt="Dr. Guruprasad K." />
             <div class="doc-body">
               <h5>Dr. Guruprasad K.</h5>
               <div class="doc-dept">Emergency Medicine</div>
-              <p class="doc-bio">Expert in emergency &amp; critical care, rapid intervention, and acute trauma
-                management.</p>
+              <p class="doc-bio">15+ Years Experience in critical care and rapid intervention.</p>
               <div class="doc-avail"><span class="dot-g"></span>Available 24/7</div>
             </div>
           </div>
         </div>
         <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="140">
           <div class="doc-card">
-            <div class="doc-av" style="background:linear-gradient(135deg,#e74c3c,#c0392b);"><i
-                class="bi bi-person-badge fs-1"></i></div>
+            <img src="https://images.unsplash.com/photo-1594824416960-9e583f7041fa?w=300&q=80" class="doc-img"
+              alt="Dr. Rajani P." />
             <div class="doc-body">
               <h5>Dr. Rajani P.</h5>
               <div class="doc-dept">Psychiatry</div>
-              <p class="doc-bio">Specialist in psychiatric consultations, behavioural treatments, and mental wellness.
-              </p>
+              <p class="doc-bio">12+ Years Experience in behavioural treatments and mental wellness.</p>
               <div class="doc-avail"><span class="dot-g"></span>Available Today</div>
             </div>
           </div>
         </div>
         <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
           <div class="doc-card">
-            <div class="doc-av" style="background:linear-gradient(135deg,#2ECC71,#25a85c);"><i
-                class="bi bi-person-badge fs-1"></i></div>
+            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=300&q=80" class="doc-img"
+              alt="Dr. Anil Kumar S." />
             <div class="doc-body">
               <h5>Dr. Anil Kumar S.</h5>
               <div class="doc-dept">Cardiology</div>
-              <p class="doc-bio">Interventional cardiologist with expertise in cardiac surgery and heart disease.</p>
+              <p class="doc-bio">20+ Years Experience in interventional cardiology and heart disease.</p>
               <div class="doc-avail"><span class="dot-g"></span>Available Today</div>
             </div>
           </div>
         </div>
         <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="260">
           <div class="doc-card">
-            <div class="doc-av" style="background:linear-gradient(135deg,#8e44ad,#6c3483);"><i
-                class="bi bi-person-badge fs-1"></i></div>
+            <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=300&q=80" class="doc-img"
+              alt="Dr. Meera Krishnan" />
             <div class="doc-body">
               <h5>Dr. Meera Krishnan</h5>
               <div class="doc-dept">Pediatrics</div>
-              <p class="doc-bio">Dedicated paediatrician providing comprehensive child healthcare from newborns.</p>
-              <div class="doc-avail"><span class="dot-g"></span>Available Today</div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="80">
-          <div class="doc-card">
-            <div class="doc-av" style="background:linear-gradient(135deg,#e67e22,#d35400);"><i
-                class="bi bi-person-badge fs-1"></i></div>
-            <div class="doc-body">
-              <h5>Dr. Suresh Babu R.</h5>
-              <div class="doc-dept">Orthopedics</div>
-              <p class="doc-bio">Senior orthopaedic surgeon specialising in joint replacements and sports injuries.</p>
-              <div class="doc-avail"><span class="dot-g"></span>Available Today</div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="140">
-          <div class="doc-card">
-            <div class="doc-av" style="background:linear-gradient(135deg,#16a085,#0e6655);"><i
-                class="bi bi-person-badge fs-1"></i></div>
-            <div class="doc-body">
-              <h5>Dr. Priya Nair</h5>
-              <div class="doc-dept">Neurology</div>
-              <p class="doc-bio">Expert neurologist for stroke, epilepsy, migraine, and neurological disorders.</p>
-              <div class="doc-avail"><span class="dot-g"></span>Available Today</div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
-          <div class="doc-card">
-            <div class="doc-av" style="background:linear-gradient(135deg,#2980b9,#1c5a8a);"><i
-                class="bi bi-person-badge fs-1"></i></div>
-            <div class="doc-body">
-              <h5>Dr. Venkatesh M.</h5>
-              <div class="doc-dept">Gastroenterology</div>
-              <p class="doc-bio">Gastroenterologist specialising in digestive disorders, liver diseases, and endoscopy.
-              </p>
-              <div class="doc-avail"><span class="dot-g"></span>Available Today</div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="260">
-          <div class="doc-card">
-            <div class="doc-av" style="background:linear-gradient(135deg,#d4ac0d,#9c7a00);"><i
-                class="bi bi-person-badge fs-1"></i></div>
-            <div class="doc-body">
-              <h5>Dr. Kavitha Reddy</h5>
-              <div class="doc-dept">Oncology</div>
-              <p class="doc-bio">Senior oncologist providing comprehensive cancer diagnosis and treatment plans.</p>
+              <p class="doc-bio">14+ Years Experience providing comprehensive child healthcare.</p>
               <div class="doc-avail"><span class="dot-g"></span>Available Today</div>
             </div>
           </div>
@@ -2474,10 +2386,12 @@
   </footer>
 
   <!-- FLOATING BUTTONS -->
-  <a href="https://wa.me/918026424466" class="fab fab-wa" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
-  <a href="tel:08026424466" class="fab fab-call" title="Emergency Call"><i class="bi bi-telephone-fill"></i></a>
-  <button class="fab fab-appt" onclick="openModal()" title="Book Appointment"><i
-      class="bi bi-calendar2-check"></i></button>
+  <a href="https://wa.me/918026424466" class="fab-ext fab-wa" title="WhatsApp Appointment">
+    <i class="bi bi-whatsapp"></i> Book on WhatsApp
+  </a>
+  <a href="tel:08026424466" class="fab-ext fab-call" title="Emergency Call">
+    <i class="bi bi-telephone-fill"></i> Call Emergency
+  </a>
   <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i
       class="bi bi-arrow-up"></i></button>
 
@@ -2526,8 +2440,8 @@
           <div id="modal-success" style="display:none;text-align:center;padding:20px 0;">
             <div style="font-size:56px;margin-bottom:14px;">✅</div>
             <h4 style="font-family:'Poppins';font-weight:700;color:var(--primary);margin-bottom:8px;">Appointment
-              Requested!</h4>
-            <p style="color:var(--muted);font-size:14px;">Our team will call you within 2 hours to confirm.<br />For
+              request received.</h4>
+            <p style="color:var(--muted);font-size:14px;">Our staff will contact you shortly.<br />For
               immediate care, call <strong>080 2642 4466</strong>.</p>
             <button class="btn-submit mt-3" style="max-width:200px;margin:0 auto;" data-bs-dismiss="modal">Done</button>
           </div>
@@ -2540,8 +2454,8 @@
   <div class="toast-box" id="toastBox">
     <i class="bi bi-check-circle-fill"></i>
     <div>
-      <div style="font-weight:700;">Appointment Requested!</div>
-      <div style="font-size:12px;color:var(--muted);">We'll call you within 2 hours to confirm.</div>
+      <div style="font-weight:700;">Appointment request received.</div>
+      <div style="font-size:12px;color:var(--muted);">Our staff will contact you shortly.</div>
     </div>
   </div>
 
@@ -2601,12 +2515,27 @@
       document.getElementById('modal-success').style.display = 'none';
       bsModal.show();
     }
+
+    function saveAppointment(name, phone, dept, date) {
+      const appts = JSON.parse(localStorage.getItem('pulse_appointments') || '[]');
+      appts.push({
+        id: Date.now(),
+        name,
+        phone,
+        dept,
+        date,
+        submittedAt: new Date().toLocaleString()
+      });
+      localStorage.setItem('pulse_appointments', JSON.stringify(appts));
+    }
+
     function submitModal() {
       const n = document.getElementById('m-name').value.trim();
       const p = document.getElementById('m-phone').value.trim();
       const d = document.getElementById('m-dept').value;
       const dt = document.getElementById('m-date').value;
       if (!n || !p || !d || !dt) { alert('Please fill all required fields.'); return; }
+      saveAppointment(n, p, d, dt);
       document.getElementById('modal-form').style.display = 'none';
       document.getElementById('modal-success').style.display = 'block';
     }
@@ -2622,6 +2551,13 @@
         else el.style.borderColor = '';
       });
       if (!valid) return;
+
+      const n = document.getElementById('f-name').value.trim();
+      const p = document.getElementById('f-phone').value.trim();
+      const d = document.getElementById('f-dept').value;
+      const dt = document.getElementById('f-date').value;
+      saveAppointment(n, p, d, dt);
+
       const tb = document.getElementById('toastBox');
       tb.style.display = 'flex';
       setTimeout(() => tb.style.display = 'none', 4000);
