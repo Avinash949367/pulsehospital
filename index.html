@@ -1597,6 +1597,17 @@
       .appt-card {
         padding: 24px;
       }
+
+      .fab-ext {
+        padding: 0;
+        width: 54px;
+        height: 54px;
+        border-radius: 50%;
+        justify-content: center;
+      }
+      .fab-ext i {
+        font-size: 24px;
+      }
     }
   </style>
 </head>
@@ -2387,10 +2398,10 @@
 
   <!-- FLOATING BUTTONS -->
   <a href="https://wa.me/918026424466" class="fab-ext fab-wa" title="WhatsApp Appointment">
-    <i class="bi bi-whatsapp"></i> Book on WhatsApp
+    <i class="bi bi-whatsapp"></i> <span class="d-none d-md-block">Book on WhatsApp</span>
   </a>
   <a href="tel:08026424466" class="fab-ext fab-call" title="Emergency Call">
-    <i class="bi bi-telephone-fill"></i> Call Emergency
+    <i class="bi bi-telephone-fill"></i> <span class="d-none d-md-block">Call Emergency</span>
   </a>
   <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i
       class="bi bi-arrow-up"></i></button>
